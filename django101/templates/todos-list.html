@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <a href="{% url 'todo create' %}">New</a>
+    </div>
+    {% for todo in object_list %}
+        <div>
+            <a href="{% url 'todo details' todo.pk %}">{{ todo.title }}</a>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

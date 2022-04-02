@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBV</title>
+</head>
+<body>
+<a href="{% url 'fbv index' %}">FBV</a>
+<a href="{% url 'cbv index' %}">CBV</a>
+<a href="{% url 'cbv index (template)' %}">CBV (template)</a>
+<a href="{% url 'todos list' %}">TODO list</a>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
