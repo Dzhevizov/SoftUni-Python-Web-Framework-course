@@ -1,0 +1,13 @@
+<form method="post" action="{% url 'login user' %}?next={{ next }}">
+    {% csrf_token %}
+    {% for field in form %}
+        <div>
+            {{ field.label_tag }}
+        </div>
+        <div>
+            {{ field }}
+        </div>
+
+    {% endfor %}
+    <button>Login</button>
+</form>

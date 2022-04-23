@@ -1,0 +1,7 @@
+<nav>
+    <a href="{% url 'register user' %}">Register</a>
+    <a href="{% url 'login user' %}">Login</a>
+    <a href="{% url 'logout user' %}?next={% url 'index' %}">Logout</a>
+</nav>
+
+{{ request.user }}
