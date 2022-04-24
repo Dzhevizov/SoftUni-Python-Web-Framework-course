@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-fb%-fy%ux3ll57^2+g=v!+krpbded**h@4_u9o$heapqg&=cs9'
+SECRET_KEY = 'django-insecure-bjm#+k7q1!9)8ag6pn2h6fkgt^g-*iq!g5)v%bg+1&!-4n0&hw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'OnlineQuizPlatform.web'
+    'OnlineQuizPlatform.auth_app',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +77,12 @@ WSGI_APPLICATION = 'OnlineQuizPlatform.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'online_quiz_platform',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -119,8 +122,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'auth_app.QuizUser'

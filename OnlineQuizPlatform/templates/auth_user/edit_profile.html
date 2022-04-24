@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form class='form' action="{% url 'edit profile' request.user.id %}" method="post">
+        <h3 class="text-center text-info">Edit Profile</h3>
+        {% csrf_token %}
+        {% for field in user_form %}
+            {% if field == 'password' %}
+                continue
+            {% endif %}
+            <div>
+                {{ field.label_tag }}
+            </div>
+            <div>
+                {{ field }}
+            </div>
+
+        {% endfor %}
+        {% for field in user_form %}
+            <div>
+                {{ field.errors }}
+            </div>
+        {% endfor %}
+        {% for field in profile_form %}
+            <div>
+                {{ field.label_tag }}
+            </div>
+            <div>
+                {{ field }}
+                {{ field.errors }}
+            </div>
+
+        {% endfor %}
+
+        <input type="submit" name="submit" class="btn btn-info btn-md" value="Edit">
+    <div>
+        <a href="{% url 'change password' %}">Change password</a>
+    </div>
+    </form>
+
+{% endblock %}

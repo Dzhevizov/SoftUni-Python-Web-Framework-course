@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WebConfig(AppConfig):
+class AuthAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'OnlineQuizPlatform.web'
+    name = 'OnlineQuizPlatform.auth_app'

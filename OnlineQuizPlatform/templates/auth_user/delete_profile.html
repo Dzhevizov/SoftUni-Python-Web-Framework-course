@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="delete-profile">
+    <form class='form' action="{% url 'delete profile' request.user.id %}" method="post">
+        <h3 class="text-center text-info">Сигурни ли сте, че искате да изтриете профила си?</h3>
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" name="submit" class="btn btn-info btn-md" value="Потвърди">
+    </form>
+    </div>
+
+
+{% endblock %}

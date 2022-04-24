@@ -1,0 +1,110 @@
+.navbar-text {
+    font-style: italic;
+    font-weight: bold;
+}
+.img-account-profile {
+    height: 10rem;
+}
+.rounded-circle {
+    border-radius: 30% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.profile {
+    margin: 50px 0 157px 0;
+}
+.delete-profile {
+    margin: 180px 0 189px 0;
+}
+.change-password {
+    margin: 48px 0 50px 0;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+  }
+
+body {
+    background-image: url('../images/images.png');
+    background-size: cover;
+    }
+
+.greeting h1 {
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 131px 0 200px 0
+}
+
+.login {
+    margin: 108px 0 0 0;
+}
+/*data form with boxes to write - profile and notes
+<div class="form"> in the html file*/
+.form {
+    background-color: #91cccc;
+    /* space around an element's content inside of any defined borders. */
+    padding: 35px;
+    /* width of the box */
+    width: 35%;
+    margin: 2% auto 10% auto;
+}
+
+/*data form where you enter data - profile and notes*/
+input[type=text],
+input[type=url],
+input[type=number],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 5px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* all other buttons */
+input[type=submit],
+.button {
+    background-color: #91cccc;
+    text-decoration: underline;
+    color: 	black;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    display: block;
+    margin: 15px auto 0;
+}
+
+/* all buttons when the mouse is on them */
+input[type=submit]:hover,
+.button:hover {
+    background-color: #5996bc;
+    text-decoration: underline;
+}

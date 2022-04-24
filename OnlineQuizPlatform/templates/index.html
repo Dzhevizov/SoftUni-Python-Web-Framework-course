@@ -1,7 +1,9 @@
-<nav>
-    <a href="{% url 'register user' %}">Register</a>
-    <a href="{% url 'login user' %}">Login</a>
-    <a href="{% url 'logout user' %}?next={% url 'index' %}">Logout</a>
-</nav>
+{% extends 'base.html' %}
 
-{{ request.user }}
+{% block content %}
+
+<div class="greeting">
+    <h1>Добре дошли в нашата онлайн куиз платформа!</h1>
+</div>
+
+{% endblock %}
